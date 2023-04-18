@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 
 import '../../../components/app_bar_widget.dart';
+import '../../../components/drawer_widget.dart';
 import '../../../components/floating_btn.dart';
 import '../../../components/section_title.dart';
 import 'category.dart';
@@ -34,7 +35,7 @@ class Body extends StatelessWidget {
           NewestWidget(),
         ],
       ),
-      //drawer: Drawer(),
+      drawer: const DrawerWidget(),
       floatingActionButton: const FloatingButton(),
     );
   }

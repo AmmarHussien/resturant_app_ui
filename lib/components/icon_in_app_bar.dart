@@ -13,7 +13,9 @@ class IconInAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: () {
+        Scaffold.of(context).openDrawer();
+      },
       child: Container(
         padding: const EdgeInsets.all(8),
         decoration: BoxDecoration(
@@ -29,6 +31,4 @@ class IconInAppBar extends StatelessWidget {
       ),
     );
   }
-
- 
 }
