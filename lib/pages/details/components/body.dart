@@ -1,11 +1,8 @@
-import 'package:clippy_flutter/clippy_flutter.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:restaurant_app_ui/components/app_bar_widget.dart';
 import 'package:restaurant_app_ui/components/drawer_widget.dart';
 import 'package:restaurant_app_ui/pages/details/components/item_nav_bar.dart';
 
-import '../../Home/components/rating.dart';
 import 'body_discription.dart';
 import 'header_image.dart';
 
