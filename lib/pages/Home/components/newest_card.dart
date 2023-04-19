@@ -24,23 +24,28 @@ class NewestCard extends StatelessWidget {
       padding: const EdgeInsets.symmetric(
         vertical: 10,
       ),
-      child: Container(
-        width: 380,
-        height: 160,
-        decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(10),
-          boxShadow: [
-            boxShadoow(),
-          ],
-        ),
-        child: CardItemData(
-          image: image,
-          title: title,
-          description: description,
-          price: price,
-          press: press,
-          ratingNum: ratingNum,
+      child: InkWell(
+        onTap: () {
+          press();
+        },
+        child: Container(
+          width: 380,
+          height: 160,
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(10),
+            boxShadow: [
+              boxShadoow(),
+            ],
+          ),
+          child: CardItemData(
+            image: image,
+            title: title,
+            description: description,
+            price: price,
+            press: press,
+            ratingNum: ratingNum,
+          ),
         ),
       ),
     );

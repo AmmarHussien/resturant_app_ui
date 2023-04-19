@@ -5,16 +5,17 @@ import '../constant/box_shadow.dart';
 class IconInAppBar extends StatelessWidget {
   const IconInAppBar({
     super.key,
-    required this.icon,
+    required this.icon, required this.press,
   });
 
   final IconData icon;
+  final Function press;
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        Scaffold.of(context).openDrawer();
+        press();
       },
       child: Container(
         padding: const EdgeInsets.all(8),

@@ -15,12 +15,16 @@ class AppBarWidget extends StatelessWidget {
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: const [
+        children: [
           IconInAppBar(
             icon: CupertinoIcons.bars,
+            press: () {
+              Scaffold.of(context).openDrawer();
+            },
           ),
           IconInAppBar(
             icon: Icons.notifications,
+            press: () {},
           ),
         ],
       ),

@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:restaurant_app_ui/pages/details/details_screen.dart';
 
 import 'newest_card.dart';
 
@@ -38,7 +39,9 @@ class NewestWidget extends StatelessWidget {
               description: 'Teste Our Hot Burger, we Provide Our Greate Foods',
               price: 9.99,
               ratingNum: 5,
-              press: () {},
+              press: () {
+                Navigator.of(context).pushNamed(DetailsScreen.routeName);
+              },
             ),
           ],
         ),

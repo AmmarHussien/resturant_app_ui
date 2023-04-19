@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 import '../../../constant/box_shadow.dart';
@@ -9,11 +8,12 @@ class PopulerItemCard extends StatelessWidget {
     required this.image,
     required this.title,
     required this.description,
-    required this.price,
+    required this.price, required this.press,
   });
 
   final String image, title, description;
   final double price;
+  final Function press;
 
   @override
   Widget build(BuildContext context) {
@@ -35,59 +35,64 @@ class PopulerItemCard extends StatelessWidget {
           padding: const EdgeInsets.symmetric(
             horizontal: 10,
           ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Container(
-                alignment: Alignment.center,
-                child: Image.asset(
-                  image,
-                  height: 130,
+          child: InkWell(
+            onTap: () {
+              press();
+            },
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(
+                  alignment: Alignment.center,
+                  child: Image.asset(
+                    image,
+                    height: 130,
+                  ),
                 ),
-              ),
-              RichText(
-                text: TextSpan(
+                RichText(
+                  text: TextSpan(
+                    children: [
+                      TextSpan(
+                        text: '$title\n',
+                        style: const TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black,
+                        ),
+                      ),
+                      TextSpan(
+                        text: description,
+                        style: const TextStyle(
+                          fontSize: 15,
+                          color: Colors.black,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(
+                  height: 12,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    TextSpan(
-                      text: '$title\n',
+                    Text(
+                      '\$ $price',
                       style: const TextStyle(
-                        fontSize: 20,
+                        fontSize: 17,
                         fontWeight: FontWeight.bold,
-                        color: Colors.black,
+                        color: Colors.red,
                       ),
                     ),
-                    TextSpan(
-                      text: description,
-                      style: const TextStyle(
-                        fontSize: 15,
-                        color: Colors.black,
-                      ),
-                    ),
+                    const Icon(
+                      Icons.favorite_border,
+                      color: Colors.red,
+                      size: 26,
+                    )
                   ],
                 ),
-              ),
-              const SizedBox(
-                height: 12,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    '\$ $price',
-                    style: const TextStyle(
-                      fontSize: 17,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.red,
-                    ),
-                  ),
-                  const Icon(
-                    Icons.favorite_border,
-                    color: Colors.red,
-                    size: 26,
-                  )
-                ],
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
