@@ -21,6 +21,7 @@ class NewestWidget extends StatelessWidget {
               title: 'Hot Pizza',
               description: 'Teste Our Hot Pizza, we Provide Our Greate Foods',
               price: 14.99,
+              ratingNum: 3,
               press: () {},
             ),
             NewestCard(
@@ -28,6 +29,7 @@ class NewestWidget extends StatelessWidget {
               title: 'Hot Slan',
               description: 'Teste Our Hot Salan, we Provide Our Greate Foods',
               price: 9.99,
+              ratingNum: 1,
               press: () {},
             ),
             NewestCard(
@@ -35,6 +37,7 @@ class NewestWidget extends StatelessWidget {
               title: 'Hot Burger',
               description: 'Teste Our Hot Burger, we Provide Our Greate Foods',
               price: 9.99,
+              ratingNum: 5,
               press: () {},
             ),
           ],

@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 import '../../../constant/box_shadow.dart';
@@ -12,10 +11,11 @@ class NewestCard extends StatelessWidget {
     required this.description,
     required this.price,
     required this.press,
+    required this.ratingNum,
   });
 
   final String image, title, description;
-  final double price;
+  final double price, ratingNum;
   final Function press;
 
   @override
@@ -40,6 +40,7 @@ class NewestCard extends StatelessWidget {
           description: description,
           price: price,
           press: press,
+          ratingNum: ratingNum,
         ),
       ),
     );

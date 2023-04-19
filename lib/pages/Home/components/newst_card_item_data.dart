@@ -1,4 +1,3 @@
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -12,10 +11,11 @@ class CardItemData extends StatelessWidget {
     required this.description,
     required this.price,
     required this.press,
+    required this.ratingNum,
   });
 
   final String image, title, description;
-  final double price;
+  final double price, ratingNum;
   final Function press;
 
   @override
@@ -68,7 +68,9 @@ class CardItemData extends StatelessWidget {
                   ],
                 ),
               ),
-              const RatingBarStar(),
+              RatingBarStar(
+                ratingNum: ratingNum,
+              ),
             ],
           ),
         ),

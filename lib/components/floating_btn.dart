@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:restaurant_app_ui/pages/cart/cart_screen.dart';
 
 import '../constant/box_shadow.dart';
 
@@ -21,7 +22,9 @@ class FloatingButton extends StatelessWidget {
       ),
       child: FloatingActionButton(
         backgroundColor: Colors.white,
-        onPressed: () {},
+        onPressed: () {
+          Navigator.of(context).pushNamed(CartScreen.routeName);
+        },
         child: const Icon(
           CupertinoIcons.cart,
           size: 28,
